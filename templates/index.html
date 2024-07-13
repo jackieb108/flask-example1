@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <!-- <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <!--<img src="{{ url_for('static', filename='dog.png') }}" class="icon" />-->
+  <h3>Enter the question you want to ask</h3>
+  <form action="/" method="post">
+    <!--<input
+      type="text"
+      name="animal2"
+      size="200"
+      placeholder="Enter your question for chatgpt"
+      required
+    />-->
+    <textarea
+      rows="5"
+      cols="33"
+      placeholder="Enter your question for chatgpt"
+      name="animal"
+      required
+    ></textarea>
+    <br />
+    <input type="submit" value="Generate" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
